@@ -1,12 +1,15 @@
 <div class="row mt-2">
-  <div class="text-center fs-1 fw-bolder">
+  <div class="text-center fs-3 fw-bolder">
     <h1>Contador {{ appValor }}</h1>
-    <contador-contador [valorContador]="appValor"></contador-contador>
+    <div class="custom-center">
+      <contador-contador
+        [valorContador]="appValor"
+        (eventoContador)="aventListener($event)"
+      ></contador-contador>
+    </div>
   </div>
 
   <div class="col">
-    <!-- Nuestras Paginas -->
-    <!-- <shared-about-page></shared-about-page> -->
     <router-outlet></router-outlet>
   </div>
 </div>

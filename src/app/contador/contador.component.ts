@@ -10,12 +10,12 @@ export class ContadorComponent {
 
   @Output() eventoContador = new EventEmitter();
 
-  decrementar(): void {
+  incrementar(): void {
     this.valorContador++;
     this.eventoContador.emit(this.valorContador);
   }
 
-  incrementar(): void {
+  decrementar(): void {
     this.valorContador--;
     this.eventoContador.emit(this.valorContador);
   }
