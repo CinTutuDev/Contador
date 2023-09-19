@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'contador-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Contador';
+  appValor: number = 3;
 }
