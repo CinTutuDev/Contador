@@ -1,7 +1,8 @@
 <section class="section_contador">
   <button (click)="incrementar()">+</button>
 
-  <input  class="text-center" type="text" [value]="valorContador" />
+  <input class="text-center" type="number" [(ngModel)]="valorContador" />
 
   <button (click)="decrementar()">-</button>
 </section>
+<button (click)="resetear()">Reset</button>
