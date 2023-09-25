@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output  } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'contador-contador',
@@ -6,10 +6,9 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
 })
 export class ContadorComponent {
   @Input()
-  valorContador: number = 0;
+  valorContador!: number;
 
   @Output() eventoContador = new EventEmitter<number>();
-  valorCero: number = 0;
 
   incrementar(): void {
     this.valorContador++;
@@ -22,7 +21,7 @@ export class ContadorComponent {
   }
 
   resetear() {
-    this.valorContador = this.valorCero;
+    this.valorContador = 0;
     this.eventoContador.emit(this.valorContador);
   }
 }

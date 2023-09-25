@@ -3,8 +3,8 @@
     <h1>Contador {{ appValor }}</h1>
     <div class="custom-center">
       <contador-contador
-        [valorContador]="appValor"
-        (eventoContador)="aventListener($event)"
+        (eventoContador)="eventListener($event)"
+        [(ngModel)]="appValor"
       ></contador-contador>
     </div>
   </div>

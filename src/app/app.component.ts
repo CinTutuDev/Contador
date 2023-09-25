@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 
 /* Componente padre/Raíz */
 export class AppComponent {
-  appValor: number = 3;
+  appValor: number = 0;
 
-  aventListener(e: number): void {
-    this.appValor = e;
+  eventListener(nuevoValor: number): void {
+    this.appValor = nuevoValor;
   }
 }
